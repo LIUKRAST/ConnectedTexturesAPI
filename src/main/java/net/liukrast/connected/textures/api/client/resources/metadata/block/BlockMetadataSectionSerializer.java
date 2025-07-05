@@ -16,7 +16,6 @@ public class BlockMetadataSectionSerializer implements MetadataSectionSerializer
 
     @Override
     public BlockMetadataSection fromJson(JsonObject json) {
-        if(json.has("dummy")) System.err.println(json);
         if(!json.has(KEY)) return BlockMetadataSection.EMPTY;
         JsonElement mapData = json.get(KEY);
         ConnectedTextureMap map;
